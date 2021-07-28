@@ -66,3 +66,21 @@ input {
 .form-btn {
   align-self: flex-end;
 }
+
+ul {
+  list-style: none;
+  border: 2px solid black;
+}
+
+li {
+  padding: 4px;
+}
+
+ul li:nth-child(even) {
+  background-color: #ddd;
+}
+
+p {
+  font-size: 22px;
+  font-weight: bold;
+}
