@@ -3,30 +3,48 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <title>Leaderboard</title>
   </head>
-  <body>
-    <header>
-      <h1>Leaderboard</h1>
+  <body class="bg-danger bg-gradient">
+    <header class="text-center my-4">
+      <div class="container">
+        <h1 class="shadow rounded px-2 w-fit-content display-1" style="width: fit-content;">Leaderboard</h1>
+      </div>
     </header>
-    <main>
-      <div class="scores-container">
-        <div class="scores-title">
-          <h2>Recent Scores</h2>
-          <button id="refresh-btn" type="button">Refresh</button>
+    <main class="bg-light bg-gradient p-4 mb-5 rounded container d-flex justify-content-around flex-wrap shadow-lg">
+      <div class="scores-container overflow-auto">
+        <div class="scores-title d-flex justify-content-between align-items-start" style="width: 400px;">
+          <h2 class="border-bottom border-danger">Recent Scores</h2>
+          <button id="refresh-btn" class="btn btn-danger glyphicon glyphicon-refresh" type="button"><i class="bi bi-gear"></i>  Refresh</button>
         </div>
-        <ul id="scores-list"></ul>
+        <div class="overflow-auto" style="height: 550px;">
+          <table class="table table-striped table-dark table-hover mt-3 d-table">
+            <thead>
+              <tr>
+                <th scope="col">User</th>
+                <th scope="col">Score</th>
+              </tr>
+            </thead>
+            <tbody id="scores-list"></tbody>
+          </table>
+        </div>
       </div>
       <div class="form-container">
-        <div class="form-title">
-          <h2>Add your Score</h2>
+        <div class="form-title" style="width: 400px;">
+          <h2 class="border-bottom border-danger" style="width: fit-content;">Add your Score</h2>
         </div>
-        <form id="form">
+        <form id="form" class="d-flex flex-column gap-3 mt-4">
           <input type="text" placeholder="Your name" required>
-          <input type="number" placeholder="Your Score" required>
-          <input class="form-btn" type="submit" value="Submit">
+          <input type="number" placeholder="Your Score" min="0" max="100" required>
+          <input class="form-btn btn btn-danger align-self-end" type="submit" value="Submit">
         </form>
       </div>
     </main>
+    <footer class="bg-dark p-4 text-white text-center">
+      <p class="lead">Copyright &copy; 2021 Leaderboard WebPage.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
 </html>
