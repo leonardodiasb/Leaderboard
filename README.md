@@ -2,6 +2,8 @@
 
 This is the Leaderboard Page will display scores submitted by different players and will allow you to submit your own score. All data will be preserved with an external Leaderboard API service.
 
+![screenshot](src/images/SS.png)
+
 ## Project Setup
 
 - Clone this repository (use this SSH key git@github.com:leonardodiasb/To-Do-List.git).
